@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <button type="button" onclick="showAlert('Button 1')" id="btn1">Button 1</button>
+        <button type="button" onclick="showAlert('Button 2')" id="btn2">Button 2</button>
+
+        <script type="text/javascript">
+        // METHOD 1: Event Listener Registration
+        // document.getElementById("btn1").addEventListener("click", function() {
+        //     alert(`You have clicked: ${this.innerText}`);
+        // });
+
+        // document.getElementById("btn2").addEventListener("click", function() {
+        //     alert(`You have clicked: ${this.innerText}`);
+        // });
+
+        // METHOD 2: Inline Event Listener
+        function showAlert(txt) {
+            alert(`You have clicked: ${txt}`);
+        }
+        </script>
+    </body>
+</html>
