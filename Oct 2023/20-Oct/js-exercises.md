@@ -25,4 +25,10 @@ Output: a = 20; b = 10;
 Eg.: [23, 45, 19, 12, 10, 3, 55] => [3, 10, 12, 19, 23, 45, 55]
 
 8. Write a program to generate first 20 FIBONACCI sequence.
-Eg.: 0 1 1 2 3 5 8 13 21 34 ......
+Eg.: 0 1 1 2 3 5 8 13 21 34 55 ......
+
+9. Write a program to convert a given string into a series of alternate uppercase and lowercase letters.
+Eg.: let a = 'Elephant';
+Output: ElEpHaNt
+let b = 'Aluminium';
+Output: AlUmInIuM
