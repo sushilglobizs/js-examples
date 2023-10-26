@@ -1,0 +1,30 @@
+<script>
+class Student {
+    constructor(name, rollNo, yearOfBirth) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    age() {
+        const today = new Date();
+        const thisYear = today.getFullYear();
+        return thisYear - this.yearOfBirth;     // 2023 - 1990
+    }
+
+    print() {
+        console.log(`Name is: ${this.name}`);
+        console.log(`Roll no. is: ${this.rollNo}`);
+        console.log(`Year of birth is: ${this.yearOfBirth}`);
+    }
+
+    isMinor() {
+        return this.age() < 18 ? true : false;
+    }
+}
+
+const stu1 = new Student("Priya", 26, 1988);
+stu1.print();
+const isMinor = stu1.isMinor() ? 'minor' : 'not minor';
+console.log(`${stu1.name} is ${stu1.age()} years old. So ${stu1.name} is a ${isMinor}`);
+</script>
