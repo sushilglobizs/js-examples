@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    // get today's date and time
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+const myCar = new Car("Ford", 2013);
+let ageDifference = myCar.age();
+console.log("Age difference: " + ageDifference);
+
+let myCar2 = new Car("Bugatti", 2020);
+console.log("Bugatti age: " + myCar2.age());
+
+myCar2.name = "Porche";
+console.log(myCar2.name);
+
+console.log(myCar2);
+
+console.log(myCar2.year);
+</script>
+
+</body>
+</html>
