@@ -5,7 +5,7 @@ class Student {
         this.rollNo = rollNo;
         this.yearOfBirth = yearOfBirth;
     }
-
+  
     age() {
         const today = new Date();
         const thisYear = today.getFullYear();
@@ -18,7 +18,7 @@ class Student {
         console.log(`Year of birth is: ${this.yearOfBirth}`);
     }
 
-    isMinor() {
+    isMinor() {     // stu1 has called this method
         return this.age() < 18 ? true : false;
     }
 }
