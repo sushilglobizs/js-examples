@@ -1,0 +1,20 @@
+#redbg {
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+}
+#bluebg {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+}
+button {
+    background-color: black;
+    color: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    border: thin solod black;
+    cursor: pointer;
+}
