@@ -28,15 +28,18 @@
             </div>
             <div>
                 <label for="agree">
-                    <input id="agree" type="checkbox" name="agree"> I agree that the information mentioned above are tru to the best of my knowledge.
+                    <input id="agree" type="checkbox" name="agree" value="1"> I agree that the information mentioned above are tru to the best of my knowledge.
                 </label>
             </div>
-            <button id="submit-btn" type="button">Submit</button>
+            <button id="submit-btn" onclick="formSubmit()" type="button">Submit</button>
         </form>
     </div>
     <br>
     <div id="form-values" class="card">
-
+        <div id="stuname-value"></div>
+        <div id="sturoll-value"></div>
+        <div id="stugender-value"></div>
+        <div id="stuchecked-value"></div>
     </div>
 
     <script src="input-form-js.js"></script>
