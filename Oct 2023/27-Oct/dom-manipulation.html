@@ -17,12 +17,21 @@
     </div>
 
     <div style="margin: 20px;">
-        <button id="redbg-btn">MAKE RED-BG YELLOW</button>
-        <button id="bluebg-btn">MAKE BLUE-BG BLACK</button>
+        <button onclick="changebg('redbg', 'yellow')" id="redbg-btn">MAKE RED-BG YELLOW</button>
+        <button onclick="changebg('bluebg', 'black')" id="bluebg-btn">MAKE BLUE-BG BLACK</button>
     </div>
 
     <script>
-    
+        function changebg(elemId, bgColor) {
+            document.getElementById(elemId).style.backgroundColor = bgColor;
+        }
+        // document.getElementById("redbg-btn").addEventListener('click', function() {
+        //     document.getElementById("redbg").style.backgroundColor = "yellow";
+        // })
+
+        // document.getElementById("bluebg-btn").addEventListener('click', function() {
+        //     document.getElementById("bluebg").style.backgroundColor = "black";
+        // })
     </script>
 </body>
 </html>
