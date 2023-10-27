@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="dom-manipulation.css">
 </head>
 <body>
-    <div id="redbg">
+    <div class="text-div" id="redbg">
         <h4>RED-BG</h4>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sed, qui at, facere commodi itaque provident ratione optio dolore aliquam rem quod quasi debitis sit exercitationem nam perferendis praesentium fuga?
     </div>
-    <div id="bluebg">
+    <div class="text-div" id="bluebg">
         <h4>BLUE-BG</h4>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus, veritatis corporis ipsa asperiores nesciunt? Repudiandae at nesciunt natus, soluta officia, laboriosam qui, laborum ea ut blanditiis nam velit vel.
     </div>
@@ -19,6 +19,7 @@
     <div style="margin: 20px;">
         <button onclick="changebg('redbg', 'yellow')" id="redbg-btn">MAKE RED-BG YELLOW</button>
         <button onclick="changebg('bluebg', 'black')" id="bluebg-btn">MAKE BLUE-BG BLACK</button>
+        <button id="hide-btn" onclick="hideElem('text-div')">HIDE DIV</button>
     </div>
 
     <script>
@@ -32,6 +33,19 @@
         // document.getElementById("bluebg-btn").addEventListener('click', function() {
         //     document.getElementById("bluebg").style.backgroundColor = "black";
         // })
+
+        function hideElem(className) {
+            let divs = document.getElementsByClassName(className);
+
+            for (const d of divs) {
+                d.style.display = "none";
+            }
+        }
+
+        // function hideElem() {
+        //     document.getElementById('redbg').style.display = 'none';
+        //     document.getElementById('bluebg').style.display = 'none';
+        // }
     </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form JS</title>
+    <link rel="stylesheet" href="input-form-js.css">
+</head>
+<body>
+    <div class="card">
+        <form id="student-form" action="backend.php" method="post">
+            <div>
+                <label for="stu-name">Student name</label>
+                <input id="stu-name" type="text" name="stu-name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="stu-roll-no">Student roll number</label>
+                <input id="stu-roll-no" type="number" name="stu-roll-no" placeholder="Enter your roll no.">
+            </div>
+            <div>
+                <label>Gender</label>
+                <label for="gender-male">
+                    <input id="gender-male" type="radio" name="gender" value="Male"> Male
+                </label>
+                <label for="gender-male">
+                    <input id="gender-female" type="radio" name="gender" value="Female"> Female
+                </label>
+            </div>
+            <div>
+                <label for="agres">
+                    <input id="agree" type="checkbox" name="agress"> I agree that the information mentioned above are tru to the best of my knowledge.
+                </label>
+            </div>
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <div id="form-values" class="card">
+
+    </div>
+
+    <script src="input-form-js.js"></script>
+</body>
+</html>

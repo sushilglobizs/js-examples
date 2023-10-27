@@ -1,0 +1,26 @@
+input {
+    border: thin solid gray;
+    height: 24px;
+    border-radius: 4px;
+}
+input[type="text"], input[type="number"] {
+    width: 300px;
+}
+label {
+    display: block;
+}
+.card {
+    border: thin solid gray;
+    padding: 20px;
+}
+form div {
+    margin: 20px 0;
+}
+button {
+    background-color: black;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: thin solod black;
+    cursor: pointer;
+}
