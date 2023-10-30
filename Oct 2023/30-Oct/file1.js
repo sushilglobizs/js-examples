@@ -1,0 +1,10 @@
+var n;
+var stuName;
+stuName = "John";
+var isHappy;
+isHappy = false;
+var x;
+x = [10];
+var animal = "Zebra";
+var age = 20;
+age = "JJ:";
