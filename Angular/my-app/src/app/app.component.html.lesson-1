@@ -1,0 +1,16 @@
+<h1>{{ a }}</h1>
+
+<button (click)="add()" type="button">Add +1</button>
+<button (click)="subtract()" type="button">Minus -1</button>
+
+<br><br>
+
+<div *ngIf="a < 20">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, qui ipsam non quidem cum consectetur cupiditate facilis enim possimus, iste voluptates unde suscipit alias accusamus! Nihil odio asperiores corporis culpa.
+</div>
+
+<br><br>
+
+<div *ngFor="let i of lines">
+    APPLE
+</div>

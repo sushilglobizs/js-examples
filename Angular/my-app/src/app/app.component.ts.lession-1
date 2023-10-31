@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+
+  a!: number;
+  lines!: number[];   // don't worry typescript, value will get assigned later
+
+  constructor() {}
+
+  ngOnInit() {
+    console.log("THIS IS FROM NG ONINIT");
+
+    // used for page/component initializations
+    this.a = 10;
+    this.lines = [1,2,3,4,5,6,7,8,9,10];
+
+    // to fetch data from backend server and assign to our variable
+    
+  }
+
+  add() {
+    this.a++;
+  }
+
+  subtract() {
+    this.a--;
+  }
+
+}
