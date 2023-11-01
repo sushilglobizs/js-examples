@@ -1,26 +1,4 @@
-<button (click)="showBands('pop')">Pop Music</button>
-<button (click)="showBands('rock')">Rock Music</button>
-<button (click)="showBands('rap')">Hip Hop / Rap</button>
-<button (click)="showBands('metal')">Metal</button>
+<button (click)="toggle(false)">Show</button>
+<button (click)="toggle(true)">Hide</button>
 
-<br><br>
-
-<ul *ngIf="activeMusicType === 'pop'">
-    <li (click)="setBand(band)" *ngFor="let band of popBands">{{ band }}</li>
-</ul>
-
-<ul *ngIf="activeMusicType === 'rock'">
-    <li (click)="setBand(band)" *ngFor="let band of rockBands">{{ band }}</li>
-</ul>
-
-<ul *ngIf="activeMusicType === 'rap'">
-    <li (click)="setBand(band)" *ngFor="let band of hipHopBands">{{ band }}</li>
-</ul>
-
-<ul *ngIf="activeMusicType === 'metal'">
-    <li (click)="setBand(band)" *ngFor="let band of metalBands">{{ band }}</li>
-</ul>
-
-<br><br>
-
-<h1>{{ selectedBand }}</h1>
+<div *ngIf="hide === false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi assumenda amet nesciunt maxime, sequi cum perferendis velit repellat facilis quas inventore harum eligendi accusamus laudantium ducimus id quo. Eveniet.</div>
