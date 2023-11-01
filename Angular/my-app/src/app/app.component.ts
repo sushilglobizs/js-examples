@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   metalBands!: string[];
 
   activeMusicType!: string;
+  selectedBand!: string;
 
   constructor() {}
 
@@ -24,7 +25,12 @@ export class AppComponent implements OnInit {
   }
 
   showBands(musicType: string) {
+    // pop | rock | rap | metal
     this.activeMusicType = musicType;
+  }
+
+  setBand(band: string) {
+    this.selectedBand = band;
   }
 
 }
