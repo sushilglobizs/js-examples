@@ -7,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  hide = true;
+  names!: string[];
 
   constructor() {}
 
   ngOnInit() {}
 
-  toggle(visibility: boolean) {
-    this.hide = visibility;
+  suggestNames(g: string) {
+    if (g === 'M') {
+      this.names = ['John', 'Rick', 'Morty'];
+    } else if (g === 'F') {
+      this.names = ['Rosie', 'Stacy', 'Anna'];
+    }
   }
 
 }

@@ -1,4 +1,12 @@
-<button (click)="toggle(false)">Show</button>
-<button (click)="toggle(true)">Hide</button>
-
-<div *ngIf="hide === false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi assumenda amet nesciunt maxime, sequi cum perferendis velit repellat facilis quas inventore harum eligendi accusamus laudantium ducimus id quo. Eveniet.</div>
+<div>What is the gender of the baby?</div>
+<br>
+<button (click)="suggestNames('M')">Male</button>
+<button (click)="suggestNames('F')">Female</button>
+<br><br>
+<div *ngIf="names">
+    <div>Here are some suggestions for baby names:</div>
+    <br>
+    <ul>
+        <li *ngFor="let n of names">{{ n }}</li>
+    </ul>
+</div>
