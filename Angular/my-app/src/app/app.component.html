@@ -1,13 +1,2 @@
-<button (click)="choseList('books')">My favourite books</button>
-<button (click)="choseList('movies')">My favourite movies</button>
-<button (click)="choseList('foods')">My favourites foods</button>
-
-<ul *ngIf="selectedType === 'books'">
-    <li *ngFor="let item of favBooks">{{ item }}</li>
-</ul>
-<ul *ngIf="selectedType === 'movies'">
-    <li *ngFor="let item of favMovies">{{ item }}</li>
-</ul>
-<ul *ngIf="selectedType === 'foods'">
-    <li *ngFor="let item of favFoods">{{ item }}</li>
-</ul>
+<!-- Below tag will be replaced* by the component to be opened (via route/url) -->
+<router-outlet></router-outlet>
