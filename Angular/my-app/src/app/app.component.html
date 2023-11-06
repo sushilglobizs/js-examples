@@ -1,12 +1,13 @@
-<div>What is the gender of the baby?</div>
-<br>
-<button (click)="suggestNames('M')">Male</button>
-<button (click)="suggestNames('F')">Female</button>
-<br><br>
-<div *ngIf="names">
-    <div>Here are some suggestions for baby names:</div>
-    <br>
-    <ul>
-        <li *ngFor="let n of names">{{ n }}</li>
-    </ul>
-</div>
+<button (click)="choseList('books')">My favourite books</button>
+<button (click)="choseList('movies')">My favourite movies</button>
+<button (click)="choseList('foods')">My favourites foods</button>
+
+<ul *ngIf="selectedType === 'books'">
+    <li *ngFor="let item of favBooks">{{ item }}</li>
+</ul>
+<ul *ngIf="selectedType === 'movies'">
+    <li *ngFor="let item of favMovies">{{ item }}</li>
+</ul>
+<ul *ngIf="selectedType === 'foods'">
+    <li *ngFor="let item of favFoods">{{ item }}</li>
+</ul>
