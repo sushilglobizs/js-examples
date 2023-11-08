@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CountriesComponent } from './countries/countries.component';
-import { StatesComponent } from './states/states.component';
-import { DistrictsComponent } from './districts/districts.component';
+import { MoviesComponent } from './movies/movies.component';
+import { StudentsComponent } from './students/students.component';
 
 const routes: Routes = [
-  {path: 'countries', component: CountriesComponent},
-  {path: 'countries/states', component: StatesComponent},
-  {path: 'countries/states/districts', component: DistrictsComponent},
-  {path: '', redirectTo: 'countries', pathMatch: 'full'}
+  {path: 'movies', component: MoviesComponent},
+  {path: 'students', component: StudentsComponent},
+  {path: '', redirectTo: 'movies', pathMatch: 'full'},
 ];
 
 @NgModule({
