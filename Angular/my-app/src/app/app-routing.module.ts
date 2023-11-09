@@ -1,11 +1,17 @@
-import { NgModule } from '@angular/core';
+import { CoursesComponent } from './courses/courses.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MoviesComponent } from './movies/movies.component';
 import { StudentsComponent } from './students/students.component';
+import { BtechComponent } from './btech/btech.component';
+import { BscComponent } from './bsc/bsc.component';
 
 const routes: Routes = [
   {path: 'movies', component: MoviesComponent},
   {path: 'students', component: StudentsComponent},
+  {path: 'courses', component: CoursesComponent},
+  {path: 'courses/btech', component: BtechComponent},
+  {path: 'courses/bsc', component: BscComponent},
   {path: '', redirectTo: 'movies', pathMatch: 'full'},
 ];
 
