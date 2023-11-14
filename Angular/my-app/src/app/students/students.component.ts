@@ -1,5 +1,6 @@
+import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { StudentsService } from './students.service';
+import { Student } from './student.model';
 
 @Component({
   selector: 'app-students',
@@ -8,12 +9,21 @@ import { StudentsService } from './students.service';
 })
 export class StudentsComponent implements OnInit {
 
-  students!: any[];
+  student: Student = {
+    stuName: '',
+    rollNo: 0,
+    email: '',
+    favDrink: ''
+  };
 
-  constructor(private studentService: StudentsService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.students = this.studentService.getStudents(); 
+  }
+
+  formSubmit(studentForm: NgForm) {
+    console.log(studentForm.value['stuName']);
+    console.log(studentForm.value['rollNo']);
   }
 
 }

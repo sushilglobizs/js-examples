@@ -1,8 +1,25 @@
-<div *ngFor="let stu of students">
-    <div>Name: {{ stu.name }}</div>
-    <div>Roll no.: {{ stu.rollNo }}</div>
-    <div>Course: {{ stu.course }}</div>
-    <div>Gender: {{ stu.gender }}</div>
-    <div>Semester: {{ stu.semester }}</div>
+<form #studentForm="ngForm" (ngSubmit)="formSubmit(studentForm)">
+    <div>
+        <label for="stuName">Enter your name:</label>
+        <input [(ngModel)]="student.stuName" name="stuName" type="text" required maxlength="20" minlength="5">
+    </div>
     <br>
-</div>
+    <div>
+        <label for="">Enter your roll no.:</label>
+        <input [(ngModel)]="student.rollNo" name="rollNo" type="number" required>
+    </div>
+    <br>
+    <div>
+        <label for="">Enter your email:</label>
+        <input [(ngModel)]="student.email" name="email" type="email" email required>
+    </div>
+    <br>
+    <div>
+        <label for="">Enter your favourite drink:</label>
+        <input [(ngModel)]="student.favDrink" name="favDrink" type="text" required>
+    </div>
+    <br>
+    <div>
+        <button [disabled]="studentForm.invalid" type="submit">Submit</button>
+    </div>
+</form>

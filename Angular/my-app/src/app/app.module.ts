@@ -11,6 +11,7 @@ import { BtechComponent } from './btech/btech.component';
 import { BscComponent } from './bsc/bsc.component';
 import { PostsComponent } from './posts/posts.component';
 import { UserComponent } from './user/user.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
