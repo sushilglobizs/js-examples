@@ -1,0 +1,9 @@
+<div *ngFor="let user of userList">
+    <div>Name: {{ user.firstname + ' ' + user.lastname }}</div>
+    <div>Email: {{ user.email }}</div>
+    <div>Date of birth: {{ user.birthDate | date:'d MMM y' }}</div>
+    <div>Username: {{ user.login.username }}</div>
+    <div>Address: {{ user.address.street }}</div>
+    <div>Lat: {{ user.address.geo.lat }}, Lng: {{ user.address.geo.lng }}</div>
+    <hr>
+</div>

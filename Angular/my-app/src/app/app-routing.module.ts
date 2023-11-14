@@ -1,3 +1,4 @@
+import { UserComponent } from './user/user.component';
 import { CoursesComponent } from './courses/courses.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'courses/btech', component: BtechComponent},
   {path: 'courses/bsc', component: BscComponent},
   {path: 'posts', component: PostsComponent},
+  {path: 'users', component: UserComponent},
   {path: '', redirectTo: 'movies', pathMatch: 'full'},
 ];
 

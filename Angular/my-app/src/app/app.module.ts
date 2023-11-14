@@ -10,6 +10,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { BtechComponent } from './btech/btech.component';
 import { BscComponent } from './bsc/bsc.component';
 import { PostsComponent } from './posts/posts.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PostsComponent } from './posts/posts.component';
     BtechComponent,
     BscComponent,
     PostsComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
