@@ -1,0 +1,52 @@
+<h4>Register your business</h4>
+
+<form #companyForm="ngForm" (ngSubmit)="submit(companyForm)">
+    <div>
+        <label>Enter your company's name</label>
+        <div><input [(ngModel)]="company.companyName" type="text" name="companyName" #companyName="ngModel" required minlength="2" maxlength="255"></div>
+        <div class="error" *ngIf="companyName.invalid && companyName.touched">
+            <div *ngIf="companyName.errors?.['required']">Company name is required</div>
+            <div *ngIf="companyName.errors?.['minlength']">Minimum length is 2</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Enter your name</label>
+        <div><input [(ngModel)]="company.name" type="text" name="name" #name="ngModel" required minlength="2" maxlength="255"></div>
+        <div class="error" *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.errors?.['required']">Name is required</div>
+            <div *ngIf="name.errors?.['minlength']">Minimum length is 2</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Enter your mobile no.</label>
+        <div><input [(ngModel)]="company.mobileNo" type="number" name="mobileNo" #mobileNo="ngModel" required pattern="[5-9]{1}[0-9]{9}"></div>
+        <div class="error" *ngIf="mobileNo.invalid && mobileNo.touched">
+            <div *ngIf="mobileNo.errors?.['required']">Mobile number is required</div>
+            <div *ngIf="mobileNo.errors?.['pattern']">Mobile number is invalid</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Enter your Aadhaar no.</label>
+        <div><input [(ngModel)]="company.aadhaarNo" type="number" name="aadhaarNo" #aadhaarNo="ngModel" required pattern="[0-9]{12}"></div>
+        <div class="error" *ngIf="aadhaarNo.invalid && aadhaarNo.touched">
+            <div *ngIf="aadhaarNo.errors?.['required']">Aadhaar number is required</div>
+            <div *ngIf="aadhaarNo.errors?.['pattern']">Aadhaar number is invalid</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Enter your Pan no.</label>
+        <div><input [(ngModel)]="company.panNo" type="text" name="panNo" #panNo="ngModel" required pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}"></div>
+        <div class="error" *ngIf="panNo.invalid && panNo.touched">
+            <div *ngIf="panNo.errors?.['required']">Pan number is required</div>
+            <div *ngIf="panNo.errors?.['pattern']">Pan number is invalid</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button [disabled]="companyForm.invalid" type="submit">Register</button>
+    </div>
+</form>
