@@ -13,7 +13,7 @@ export class StudentsComponent implements OnInit {
     stuName: '',
     rollNo: 0,
     email: '',
-    favDrink: ''
+    panCard: ''
   };
 
   constructor() {}
@@ -22,8 +22,7 @@ export class StudentsComponent implements OnInit {
   }
 
   formSubmit(studentForm: NgForm) {
-    console.log(studentForm.value['stuName']);
-    console.log(studentForm.value['rollNo']);
+    console.log(studentForm);
   }
 
 }
