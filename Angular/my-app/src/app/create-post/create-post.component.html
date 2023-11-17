@@ -1,3 +1,5 @@
+<h4 style="color: blue; font-weight: bold;">{{ formTitle }}</h4>
+
 <form #createPostForm="ngForm" (ngSubmit)="formSubmit(createPostForm)">
     <div>
         <label for="">Enter title</label>
@@ -9,8 +11,8 @@
     <br>
     <div>
         <label for="">Content</label>
-        <div><input [(ngModel)]="createPost.content" name="content" #content="ngModel" required type="text"></div>
-        <div class="error" *ngIf="content.invalid && content.touched">
+        <div><textarea [(ngModel)]="createPost.content" name="content" #content="ngModel" required type="text"></div>
+        <div class="error" *ngIf="content.invalid && content.touched"></textarea>
             <div *ngIf="content.errors?.['required']">Content is required</div>
         </div>
     </div>

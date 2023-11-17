@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CreatePost } from './create-post.model';
 import { CreatePostService } from './create-post.service';
@@ -8,7 +8,10 @@ import { CreatePostService } from './create-post.service';
   templateUrl: './create-post.component.html',
   styleUrls: ['./create-post.component.css']
 })
-export class CreatePostComponent {
+export class CreatePostComponent implements OnInit {
+
+  @Input() formTitle!: string;
+  @Output() formSubmitEvent = new EventEmitter<any>();
 
   createPost: CreatePost = {
     category: '',
@@ -25,6 +28,9 @@ export class CreatePostComponent {
 
   constructor(private createPostService: CreatePostService) {}
 
+  ngOnInit() {
+  }
+
   formSubmit(form: NgForm) {
     this.postSubmitted = false;   // to hide the successfully submitted message
     this.btnDisabled = true;      // to disable the submit button
@@ -34,6 +40,9 @@ export class CreatePostComponent {
       this.btnDisabled = false;   // to enable the submit button
 
       form.reset();
+
+      // send data to parent
+      this.formSubmitEvent.emit(false);
     });
   }
 

@@ -1,8 +1,26 @@
-<div *ngFor="let post of posts">
-    <div *ngIf="post.id % 2 !== 0">
-        <div><b>{{ post.id + ' - ' + post.title }}</b></div>
-        <div><img src="{{ post.thumbnail }}"></div>
-        <p>{{ post.content }}</p>
-        <br>
+<h2>Posts</h2>
+
+<div><button (click)="showForm()">Add new Post</button></div>
+
+<br>
+
+<app-create-post
+    *ngIf="showCreatePostForm"
+    [formTitle]="'Create Post Form'"
+    (formSubmitEvent)="hideForm($event)"
+></app-create-post>
+
+<br>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsam error, aliquid vero corporis quisquam autem aperiam repellat animi magnam! Hic asperiores aut fuga amet impedit illo dolorem debitis reprehenderit!
+
+<div *ngIf="0">
+    <div *ngFor="let post of posts">
+        <div *ngIf="post.id % 2 !== 0">
+            <div><b>{{ post.id + ' - ' + post.title }}</b></div>
+            <!-- <div><img src="{{ post.thumbnail }}"></div> -->
+            <p>{{ post.content }}</p>
+            <br>
+        </div>
     </div>
 </div>
