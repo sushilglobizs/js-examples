@@ -1,0 +1,47 @@
+<form #createPostForm="ngForm" (ngSubmit)="formSubmit(createPostForm)">
+    <div>
+        <label for="">Enter title</label>
+        <div><input [(ngModel)]="createPost.title" name="title" #title="ngModel" required type="text"></div>
+        <div class="error" *ngIf="title.invalid && title.touched">
+            <div *ngIf="title.errors?.['required']">Title is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="">Content</label>
+        <div><input [(ngModel)]="createPost.content" name="content" #content="ngModel" required type="text"></div>
+        <div class="error" *ngIf="content.invalid && content.touched">
+            <div *ngIf="content.errors?.['required']">Content is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="">Status</label>
+        <div>
+            <select [(ngModel)]="createPost.status" name="status" #status="ngModel" required>
+                <option value="">- Select status -</option>
+                <option *ngFor="let status of statuses" [value]="status.value">{{ status.text }}</option>
+            </select>
+        </div>
+        <div class="error" *ngIf="status.invalid && status.touched">
+            <div *ngIf="status.errors?.['required']">Status is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="">Category</label>
+        <div>
+            <select [(ngModel)]="createPost.category" name="category" #category="ngModel" required>
+                <option value="">- Select category -</option>
+                <option *ngFor="let category of categories" [value]="category.value">{{ category.text }}</option>
+            </select>
+        </div>
+        <div class="error" *ngIf="category.invalid && category.touched">
+            <div *ngIf="category.errors?.['required']">Category is required</div>
+        </div>
+    </div>
+    <br>
+    <div><button [disabled]="createPostForm.invalid || btnDisabled">Submit</button></div>
+</form>
+<br><br>
+<div *ngIf="postSubmitted" class="success">Article successfully submitted!</div>

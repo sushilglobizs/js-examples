@@ -13,6 +13,7 @@ import { PostsComponent } from './posts/posts.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { CompanyComponent } from './company/company.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CompanyComponent } from './company/company.component';
     PostsComponent,
     UserComponent,
     CompanyComponent,
+    CreatePostComponent,
   ],
   imports: [
     BrowserModule,
