@@ -9,6 +9,7 @@ import { BscComponent } from './bsc/bsc.component';
 import { PostsComponent } from './posts/posts.component';
 import { CompanyComponent } from './company/company.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 const routes: Routes = [
   {path: 'movies', component: MoviesComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'users', component: UserComponent},
   {path: 'company', component: CompanyComponent},
   {path: 'create-post', component: CreatePostComponent},
+  {path: 'heroes', component: HeroesComponent},
   {path: '', redirectTo: 'movies', pathMatch: 'full'},
 ];
 

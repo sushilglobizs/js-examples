@@ -14,6 +14,8 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { CompanyComponent } from './company/company.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
     UserComponent,
     CompanyComponent,
     CreatePostComponent,
+    HeroesComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,
