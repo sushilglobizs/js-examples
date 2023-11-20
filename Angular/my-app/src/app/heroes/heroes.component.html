@@ -1,5 +1,11 @@
-<h3>My Heroes</h3>
+<div style="background-color: cadetblue; padding: 10px;">
+  <h3>My Heroes</h3>
 
-<div *ngFor="let hero of heroes">
-    <app-hero [hero]="hero"></app-hero>
+  <div *ngFor="let hero of heroes">
+    <app-hero [hero]="hero" (heroEmitter)="heroClicked($event)"></app-hero>
+  </div>
+
+  <br />
+
+  <app-hero-edit-form [hero]="tempHero"></app-hero-edit-form>
 </div>

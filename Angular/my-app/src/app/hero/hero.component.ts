@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Hero } from './hero.model';
 
 @Component({
@@ -9,5 +9,10 @@ import { Hero } from './hero.model';
 export class HeroComponent {
 
   @Input() hero!: Hero;
+  @Output() heroEmitter = new EventEmitter<Hero>();
+
+  heroClicked() {
+    this.heroEmitter.emit(this.hero);
+  }
 
 }

@@ -1,0 +1,15 @@
+<div style="background-color: darkgreen;">
+  <h4>Edit hero</h4>
+  <form #heroForm="ngForm">
+    <input
+      type="text"
+      [(ngModel)]="hero.name"
+      name="name"
+      #name="ngModel"
+      required
+    />
+    <div class="error" *ngIf="name.invalid && name.touched">
+      <div *ngIf="name.errors?.['required']">Hero name is required</div>
+    </div>
+  </form>
+</div>

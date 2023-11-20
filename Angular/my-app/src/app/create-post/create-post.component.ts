@@ -11,7 +11,7 @@ import { CreatePostService } from './create-post.service';
 export class CreatePostComponent implements OnInit {
 
   @Input() formTitle!: string;
-  @Output() formSubmitEvent = new EventEmitter<any>();
+  @Output() formSubmitEvent = new EventEmitter<boolean>();
 
   createPost: CreatePost = {
     category: '',

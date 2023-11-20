@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'company', component: CompanyComponent},
   {path: 'create-post', component: CreatePostComponent},
   {path: 'heroes', component: HeroesComponent},
-  {path: '', redirectTo: 'movies', pathMatch: 'full'},
+  {path: '', redirectTo: 'heroes', pathMatch: 'full'},
 ];
 
 @NgModule({
