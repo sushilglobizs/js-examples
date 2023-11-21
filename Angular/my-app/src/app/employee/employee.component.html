@@ -21,10 +21,7 @@
         <label>Designation: </label>
         <select [ngModel]="employee.designation" #designation="ngModel" name="designation" required="">
             <option value="">- Select Designation -</option>
-            <option value="accountant">Accountant</option>
-            <option value="developer">Developer</option>
-            <option value="director">Director</option>
-            <option value="digital-marketer">Digital Marketer</option>
+            <option *ngFor="let d of designations" [value]="d.value">{{ d.name }}</option>
         </select>
         <div class="error" *ngIf="designation.invalid && designation.touched">
             <div *ngIf="designation.errors?.['required']">Employee designation is required</div>

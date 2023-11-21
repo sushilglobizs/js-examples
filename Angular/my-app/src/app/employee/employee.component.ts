@@ -16,6 +16,20 @@ export class EmployeeComponent {
     gender: ''
   };
 
+  designations = [{
+    name: 'Accountant',
+    value: 'accountant'
+  }, {
+    name: 'Developer',
+    value: 'developer'
+  }, {
+    name: 'Director',
+    value: 'director'
+  }, {
+    name: 'Digital Marketer',
+    value: 'digital-marketer'
+  }, ];
+
   formSubmit(form: NgForm) {
     this.employee = form.value;
   }
