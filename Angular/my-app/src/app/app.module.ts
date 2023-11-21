@@ -15,8 +15,11 @@ import { FormsModule } from '@angular/forms';
 import { CompanyComponent } from './company/company.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { HeroComponent } from './hero/hero.component';
-import { HeroEditFormComponent } from './hero-edit-form/hero-edit-form.component';
+import { HeroComponent } from './heroes/hero/hero.component';
+import { HeroEditFormComponent } from './heroes/hero-edit-form/hero-edit-form.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { TeamComponent } from './team/team.component';
+import { PlayerComponent } from './team/player/player.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { HeroEditFormComponent } from './hero-edit-form/hero-edit-form.component
     HeroesComponent,
     HeroComponent,
     HeroEditFormComponent,
+    EmployeeComponent,
+    TeamComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,

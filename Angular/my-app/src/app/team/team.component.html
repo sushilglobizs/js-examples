@@ -1,0 +1,14 @@
+<br />
+<div>
+  <span
+    *ngFor="let team of teams"
+    class="box"
+    (click)="setTeam(team)"
+  >
+    {{ team.name }}
+  </span>
+</div>
+<br>
+<hr>
+<br>
+<app-player *ngIf="selectedTeam" [team]="selectedTeam"></app-player>

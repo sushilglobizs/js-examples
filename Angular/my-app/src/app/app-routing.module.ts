@@ -10,6 +10,8 @@ import { PostsComponent } from './posts/posts.component';
 import { CompanyComponent } from './company/company.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
   {path: 'movies', component: MoviesComponent},
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path: 'company', component: CompanyComponent},
   {path: 'create-post', component: CreatePostComponent},
   {path: 'heroes', component: HeroesComponent},
-  {path: '', redirectTo: 'heroes', pathMatch: 'full'},
+  {path: 'employee', component: EmployeeComponent},
+  {path: 'team', component: TeamComponent},
+  {path: '', redirectTo: 'employee', pathMatch: 'full'},
 ];
 
 @NgModule({

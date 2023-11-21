@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero/hero.model';
+import { Hero } from './hero/hero.model';
 import { HeroesService } from './heroes.service';
 
 @Component({
@@ -10,7 +10,9 @@ import { HeroesService } from './heroes.service';
 export class HeroesComponent implements OnInit {
 
   heroes!: Hero[];
-  tempHero!: Hero;
+  tempHero: Hero = {
+    name: ''
+  };
 
   constructor(private heroesService: HeroesService) {}
 

@@ -13,8 +13,4 @@ export class HeroEditFormComponent {
     name: ''
   };
 
-  formSubmit(form: NgForm) {
-
-  }
-
 }

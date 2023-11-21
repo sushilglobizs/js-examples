@@ -1,0 +1,63 @@
+<h3>Employee Registration Form</h3>
+
+<form #employeeForm="ngForm" (ngSubmit)="formSubmit(employeeForm)">
+    <div>
+        <label>Employee ID: </label>
+        <input type="number" [ngModel]="employee.id" #id="ngModel" name="id" required>
+        <div class="error" *ngIf="id.invalid && id.touched">
+            <div *ngIf="id.errors?.['required']">Employee ID is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Employee name: </label>
+        <input type="text" [ngModel]="employee.name" #name="ngModel" name="name" required>
+        <div class="error" *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.errors?.['required']">Employee name is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Designation: </label>
+        <select [ngModel]="employee.designation" #designation="ngModel" name="designation" required="">
+            <option value="">- Select Designation -</option>
+            <option value="accountant">Accountant</option>
+            <option value="developer">Developer</option>
+            <option value="director">Director</option>
+            <option value="digital-marketer">Digital Marketer</option>
+        </select>
+        <div class="error" *ngIf="designation.invalid && designation.touched">
+            <div *ngIf="designation.errors?.['required']">Employee designation is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Gender:</label>
+        <label for="male">
+            <input [ngModel]="employee.gender" #gender="ngModel" id="male" name="gender" type="radio" value="Male" required> Male
+        </label>
+        <label for="female">
+            <input [ngModel]="employee.gender" #gender="ngModel" id="female" name="gender" type="radio" value="Female" required> Female
+        </label>
+        <div class="error" *ngIf="gender.invalid && gender.touched">
+            <div *ngIf="gender.errors?.['required']">Employee gender is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="ack">
+        <label for="ack"> I acknowledge that the information entered above is true to the best of my knowledge.</label>
+    </div>
+    <br>
+    <div>
+        <button [disabled]="employeeForm.invalid" type="submit">Submit</button>
+    </div>
+</form>
+
+<hr>
+
+<div><b>Submitted form:</b></div>
+<div>Employee ID: {{ employee.id }}</div>
+<div>Employee name: {{ employee.name }}</div>
+<div>Designation: {{ employee.designation }}</div>
+<div>Gender: {{ employee.gender }}</div>
