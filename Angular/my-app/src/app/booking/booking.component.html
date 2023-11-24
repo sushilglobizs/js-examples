@@ -1,0 +1,40 @@
+<form [formGroup]="myForm" (ngSubmit)="formSubmit()">
+    <label for="name">Name: </label>
+    <div>
+        <input id="name" type="text" formControlName="name">
+        <div class="error" *ngIf="name && name.invalid && name.touched">
+            <div *ngIf="name.errors?.['required']">Name is required</div>
+            <div *ngIf="name.errors?.['minlength']">Minimum length is 5</div>
+            <div *ngIf="name.errors?.['maxlength']">Maximum length is 20</div>
+        </div>
+    </div>
+    <br>
+    <label for="noOfPersons">No. of persons: </label>
+    <div>
+        <input id="noOfPersons" type="number" formControlName="noOfPersons">
+        <div class="error" *ngIf="noOfPersons && noOfPersons.invalid && noOfPersons.touched">
+            <div *ngIf="noOfPersons.errors?.['required']">No. of persons is required</div>
+            <div *ngIf="noOfPersons.errors?.['min']">Minimum person is 1</div>
+            <div *ngIf="noOfPersons.errors?.['max']">Maximum person is 4</div>
+        </div>
+    </div>
+    <br>
+    <label for="roomType">Room type: </label>
+    <div>
+        <select id="roomType" formControlName="roomType">
+            <option value="">- Select Room Type -</option>
+            <option value="1">A/C Deluxe</option>
+            <option value="2">Non A/C Deluxe</option>
+            <option value="3">A/C Premium</option>
+            <option value="4">Non A/C Premium</option>
+            <option value="5">Excelsior</option>
+        </select>
+        <div class="error" *ngIf="roomType && roomType.invalid && roomType.touched">
+            <div *ngIf="roomType.errors?.['required']">Room type is required</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>

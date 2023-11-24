@@ -11,15 +11,17 @@ import { BtechComponent } from './btech/btech.component';
 import { BscComponent } from './bsc/bsc.component';
 import { PostsComponent } from './posts/posts.component';
 import { UserComponent } from './user/user.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CompanyComponent } from './company/company.component';
-import { CreatePostComponent } from './create-post/create-post.component';
+import { CreatePostComponent } from './posts/create-post/create-post.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { HeroEditFormComponent } from './heroes/hero-edit-form/hero-edit-form.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { TeamComponent } from './team/team.component';
 import { PlayerComponent } from './team/player/player.component';
+import { LanguageComponent } from './language/language.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +41,15 @@ import { PlayerComponent } from './team/player/player.component';
     EmployeeComponent,
     TeamComponent,
     PlayerComponent,
+    LanguageComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
